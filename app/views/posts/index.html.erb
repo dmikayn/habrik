@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1><%= t('forms.posts') %></h1>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <%= link_to t('forms.show_this_post'), post %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to t('forms.new_post'), new_post_path %>

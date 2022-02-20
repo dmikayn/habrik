@@ -1,0 +1,13 @@
+<%= form_tag comments_create_path, method: :post do |form| %>
+  <div>
+    <%= label_tag :contents, t('forms.write_a_comment'), style: "display: block" %>
+    <%= text_area_tag :contents %>
+  </div>
+
+  <%= hidden_field_tag :comment_id, @comment %>
+  <%= hidden_field_tag :post, @post %>
+
+  <div>
+    <%= submit_tag t('forms.submit') %>
+  </div>
+<% end %>

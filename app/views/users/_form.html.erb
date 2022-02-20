@@ -1,0 +1,32 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <b><%= t 'forms.errors', count: user.errors.count %></b>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label t('forms.username'), style: "display: block" %>
+    <%= form.text_field :username %>
+  </div>
+
+  <div>
+    <%= form.label t('forms.password'), style: "display: block" %>
+    <%= form.password_field :password %>
+  </div>
+
+   <div>
+    <%= form.label t('forms.password_confirmation'), style: "display: block" %>
+    <%= form.password_field :password_confirmation %>
+  </div>
+
+  <div>
+    <%= form.submit t('forms.create_user')%>
+  </div>
+<% end %>

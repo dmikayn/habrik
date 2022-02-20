@@ -1,0 +1,12 @@
+<% flash[:error]&.tap do |error| %>
+    <div class="alert alert-danger"><%= error %></div>
+<% end %>
+<%= form_with url: session_create_url, method: :post, locale: true do |f|%>
+    <%= f.label t('forms.username'), style: "display: block" %>
+    <%= f.text_field :username, required: true %><br/>
+    <%= f.label t('forms.password'), style: "display: block" %>
+    <%= f.password_field :password, required: true %><br/>
+    <%= f.submit t('forms.sign_in'), required: true %>
+<% end %>
+
+<%= link_to t('forms.registration'), {controller: :users, action: :new} %>

@@ -1,0 +1,10 @@
+<h1><%= t('forms.editing_post') %></h1>
+
+<%= render "form", post: @post %>
+
+<br>
+
+<div>
+  <%= link_to t('forms.show_this_post'), @post %> |
+  <%= link_to t('forms.back_to_posts'), posts_path %>
+</div>

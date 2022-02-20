@@ -1,0 +1,50 @@
+ru:
+  forms:
+    submit: Добавить комментарий
+    write_a_comment: Прокомментировать
+    title: Заголовок
+    body: Текст
+    show_this_post: Показть этот пост
+    back_to_posts: Вернуться к постам
+    create_post: Создать пост
+    new_post: Новый пост
+    respond: Ответить
+    delete: Удалить
+    comment: Комментарий
+    edit_this_post: Редактировать пост
+    registration: Регистрация
+    sign_in: Вход
+    password_confirmation: Повтор пороля
+    username: Имя пользователя
+    password: Пароль
+    create_user: Добавить пользователя
+    show_this_user: Показать пользователя 
+    back_to_users: Вернуться к пользователям
+    new_user: Новый пользователь
+    edit_this_user: Редактировать пользователя
+    destroy_this_user: Удалить этого пользователя
+    all_posts: Все посты
+    all_users: Все пользователи
+    exit: Выйти
+    editing_post: Создание поста
+    posts: Посты
+    comments: Комментарии
+    editing_user: Создание пользователя
+    users: Пользователи
+    destroy_this_post: Удалить этот пост
+    errors:
+      one: В форме ошибка
+      few: В форме %{count} ошибки
+      many: В форме %{count} ошибок
+  activerecord:
+    attributes:
+      user:
+        username: Имя пользователя
+        password: Пароль
+        password_confirmation: Повтор пароля
+        password_digest: Пароль
+      post:
+        title: Заголовок
+        body: Текст
+      comment:
+        contents: Комментарий

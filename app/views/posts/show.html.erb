@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @post %>
+
+<h2><%= t('forms.comments') %>:</h2>
+<% @post.get_comments.each do |entry| %>
+  <div style="margin-left: <%= (entry[:level] - 1) * 50 %>px">
+    <strong><%= entry[:comment].user.username %></strong>:
+    <%= entry[:comment].contents %>
+    <%= link_to t('forms.respond'), comments_new_path(comment: entry[:comment], post: @post) %>
+    <% if entry[:comment].user == @current_user %>
+      <%= link_to t('forms.delete'), comments_destroy_path(comment: entry[:comment], post: @post) %>
+    <% end %>
+  </div>
+<% end %>
+
+<%= link_to t('forms.comment'), comments_new_path(comment: @post.comment, post: @post) %>
+
+
+
+<div>
+  <%= link_to t('forms.edit_this_post'), edit_post_path(@post) %> |
+  <%= link_to t('forms.back_to_posts'), posts_path %>
+  <%= button_to t('forms.destroy_this_post'), @post, method: :delete %>
+</div>

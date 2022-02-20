@@ -1,0 +1,80 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   "true": "foo"
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  forms:
+    submit: Add comment
+    write_a_comment: Write a comment
+    title: Title
+    body: Text
+    show_this_post: Show this post
+    back_to_posts: Back to posts
+    create_post: Create post
+    new_post: New post
+    respond: Respond
+    delete: Delete
+    comment: Comment
+    edit_this_post: Edit post
+    registration: Registration
+    sign_in: Sign in
+    password_confirmation: Pasword confirmation
+    username: Username
+    password: Password
+    create_user: Create user
+    show_this_user: Show this user
+    back_to_users: Back to users
+    new_user: New user
+    edit_this_user: Edit this user
+    destroy_this_user: Destroy this user
+    all_posts: All posts
+    all_users: All users
+    exit: Exit
+    editing_post: Editing post
+    posts: Posts
+    comments: Comments
+    editing_user: Editing user
+    users: Users
+    destroy_this_post: Destroy this post
+  
+
+
+
+
+  activerecord:
+    attributes:
+      user:
+        username: Username
+        password: Password
+      post:
+        title: Title
+        body: Text
+      comment:
+        contents: Comment

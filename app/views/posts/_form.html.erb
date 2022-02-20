@@ -1,0 +1,26 @@
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div style="color: red">
+    <b><%= t 'forms.errors', count: user.errors.count %></b>
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label t('forms.title'), style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label t('forms.body'), style: "display: block" %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.submit t('forms.create_post')%>
+  </div>
+<% end %>
